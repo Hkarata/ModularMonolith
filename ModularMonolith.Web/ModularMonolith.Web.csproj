@@ -7,8 +7,24 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.2"/>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+        <PackageReference Include="MediatR" Version="12.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ModularMonolith.Books.Contracts\ModularMonolith.Books.Contracts.csproj" />
+      <ProjectReference Include="..\ModularMonolith.Books\ModularMonolith.Books.csproj" />
+    </ItemGroup>
+    
 </Project>

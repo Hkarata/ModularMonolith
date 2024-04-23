@@ -1,6 +1,3 @@
 ﻿namespace ModularMonolith.Books.Contracts.Requests;
 
-public struct CreateBookDto
-{
-    
-}
+public record struct CreateBookDto(string Title, DateTime DatePublished, List<CreateAuthorDto> Authors);

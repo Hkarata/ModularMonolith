@@ -1,3 +1,3 @@
 ﻿namespace ModularMonolith.Books.Contracts.Requests;
 
-public record CreateAuthorDto();
+public record struct CreateAuthorDto(string Name);

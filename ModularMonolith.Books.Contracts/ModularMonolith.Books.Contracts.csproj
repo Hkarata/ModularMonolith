@@ -6,4 +6,16 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Responses\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR.Contracts" Version="2.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ModularMonolith.Shared\ModularMonolith.Shared.csproj" />
+    </ItemGroup>
+
 </Project>

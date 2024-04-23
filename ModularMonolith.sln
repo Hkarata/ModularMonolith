@@ -1,8 +1,40 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Web", "ModularMonolith.Web\ModularMonolith.Web.csproj", "{888ED51C-19E5-41C2-BFA9-63AA665CF8FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BooksModule", "BooksModule", "{B5000943-87B1-4E54-8E01-B25CF5783224}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Books", "ModularMonolith.Books\ModularMonolith.Books.csproj", "{11CCEFA5-1EDF-4453-8108-FB7BD3A56B82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Books.Contracts", "ModularMonolith.Books.Contracts\ModularMonolith.Books.Contracts.csproj", "{E2617A20-A282-46E7-8BF9-D8CFE451A686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Shared", "ModularMonolith.Shared\ModularMonolith.Shared.csproj", "{5A4007A0-9CD3-467C-BDC2-2ADA70D755CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{888ED51C-19E5-41C2-BFA9-63AA665CF8FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888ED51C-19E5-41C2-BFA9-63AA665CF8FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888ED51C-19E5-41C2-BFA9-63AA665CF8FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888ED51C-19E5-41C2-BFA9-63AA665CF8FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CCEFA5-1EDF-4453-8108-FB7BD3A56B82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CCEFA5-1EDF-4453-8108-FB7BD3A56B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CCEFA5-1EDF-4453-8108-FB7BD3A56B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CCEFA5-1EDF-4453-8108-FB7BD3A56B82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2617A20-A282-46E7-8BF9-D8CFE451A686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2617A20-A282-46E7-8BF9-D8CFE451A686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2617A20-A282-46E7-8BF9-D8CFE451A686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2617A20-A282-46E7-8BF9-D8CFE451A686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A4007A0-9CD3-467C-BDC2-2ADA70D755CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A4007A0-9CD3-467C-BDC2-2ADA70D755CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A4007A0-9CD3-467C-BDC2-2ADA70D755CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A4007A0-9CD3-467C-BDC2-2ADA70D755CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{11CCEFA5-1EDF-4453-8108-FB7BD3A56B82} = {B5000943-87B1-4E54-8E01-B25CF5783224}
+		{E2617A20-A282-46E7-8BF9-D8CFE451A686} = {B5000943-87B1-4E54-8E01-B25CF5783224}
 	EndGlobalSection
 EndGlobal
