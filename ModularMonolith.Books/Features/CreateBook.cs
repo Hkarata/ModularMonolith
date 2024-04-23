@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.Logging;
 using ModularMonolith.Books.Contracts.Requests;
 using ModularMonolith.Books.Data;
 using ModularMonolith.Books.Entities;
@@ -13,16 +14,16 @@ namespace ModularMonolith.Books.Features;
 internal abstract class CreateBook
 {
 
-    public class Command : IRequest<Result<bool>>
+    public class Command : IRequest<Result<Guid>>
     {
         public string Title { get; init; } = string.Empty;
         public DateTime DatePublished { get; init; }
         public List<string>? Authors { get; init; }
     }
 
-    internal sealed class Handler(BooksDbContext context) : IRequestHandler<Command, Result<bool>>
+    internal sealed class Handler(BooksDbContext context, ILogger<Handler> logger) : IRequestHandler<Command, Result<Guid>>
     {
-        public async Task<Result<bool>> Handle(Command request, CancellationToken cancellationToken)
+        public async Task<Result<Guid>> Handle(Command request, CancellationToken cancellationToken)
         {
             var book = new Book
             {
@@ -45,9 +46,8 @@ internal abstract class CreateBook
             context.Books.Add(book);
 
             await context.SaveChangesAsync(cancellationToken);
-
-
-            return true;
+            logger.LogInformation("Book titled {Title} has been created", book.Title);
+            return book.Id;
         }
     }
 
@@ -68,6 +68,9 @@ public class CreateBookEndPoint : ICarterModule
 
             var result = await sender.Send(request);
             return result.IsFailure ? Results.BadRequest(result.Error) : Results.Ok(result);
-        });
+        })
+        .Produces<Result<Guid>>()
+        .WithOpenApi()
+        .WithTags("Books");
     }
 }

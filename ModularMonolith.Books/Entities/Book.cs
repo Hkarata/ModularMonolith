@@ -1,16 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModularMonolith.Books.Entities;
 
+[Index(nameof(Title), IsUnique = true)]
 internal sealed class Book
 {
     public Guid Id { get; init; }
 
     [StringLength(100)]
-    public string Title { get; set; } = string.Empty;
+    public string Title { get; init; } = string.Empty;
 
     // Soft-Delete Implementation
-    public bool IsDeleted { get; set; }
+    public bool IsDeleted { get; init; }
 
     public DateTime DatePublished { get; init; }
 

@@ -60,6 +60,9 @@ namespace ModularMonolith.Books.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Name")
+                        .IsUnique();
+
                     b.ToTable("Authors", "Books");
                 });
 
@@ -87,6 +90,9 @@ namespace ModularMonolith.Books.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Title")
+                        .IsUnique();
 
                     b.ToTable("Books", "Books");
                 });
