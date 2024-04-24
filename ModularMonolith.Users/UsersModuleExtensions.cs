@@ -1,12 +1,13 @@
 ﻿using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Protocols;
+using Microsoft.Extensions.Configuration;
 using ModularMonolith.Users.Data;
+using ModularMonolith.Users.Services;
 
 namespace ModularMonolith.Users;
 
-public static class UsersModuleExtension
+public static class UsersModuleExtensions
 {
     public static IServiceCollection AddUsersModuleServices(
         this IServiceCollection services,
@@ -16,6 +17,9 @@ public static class UsersModuleExtension
     {
         services.AddDbContext<UsersDbContext>(options =>
             options.UseSqlServer(configurationManager.GetConnectionString("AppDbConnection")));
+        
+        services.AddScoped<PasswordService>();
+        
         return services;
     }
 }

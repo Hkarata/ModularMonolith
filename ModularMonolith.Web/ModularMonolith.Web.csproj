@@ -25,6 +25,7 @@
     <ItemGroup>
       <ProjectReference Include="..\ModularMonolith.Books.Contracts\ModularMonolith.Books.Contracts.csproj" />
       <ProjectReference Include="..\ModularMonolith.Books\ModularMonolith.Books.csproj" />
+      <ProjectReference Include="..\ModularMonolith.Users\ModularMonolith.Users.csproj" />
     </ItemGroup>
     
 </Project>

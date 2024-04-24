@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Books.Contr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Shared", "ModularMonolith.Shared\ModularMonolith.Shared.csproj", "{5A4007A0-9CD3-467C-BDC2-2ADA70D755CE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsersModule", "UsersModule", "{A66A675E-A2D6-4A10-9F94-D23CEDE4BD02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Users", "ModularMonolith.Users\ModularMonolith.Users.csproj", "{D9C28F67-FA60-4E39-90D6-9E9CEC134E0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,9 +36,14 @@ Global
 		{5A4007A0-9CD3-467C-BDC2-2ADA70D755CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A4007A0-9CD3-467C-BDC2-2ADA70D755CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A4007A0-9CD3-467C-BDC2-2ADA70D755CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C28F67-FA60-4E39-90D6-9E9CEC134E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C28F67-FA60-4E39-90D6-9E9CEC134E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C28F67-FA60-4E39-90D6-9E9CEC134E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C28F67-FA60-4E39-90D6-9E9CEC134E0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{11CCEFA5-1EDF-4453-8108-FB7BD3A56B82} = {B5000943-87B1-4E54-8E01-B25CF5783224}
 		{E2617A20-A282-46E7-8BF9-D8CFE451A686} = {B5000943-87B1-4E54-8E01-B25CF5783224}
+		{D9C28F67-FA60-4E39-90D6-9E9CEC134E0E} = {A66A675E-A2D6-4A10-9F94-D23CEDE4BD02}
 	EndGlobalSection
 EndGlobal

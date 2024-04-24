@@ -1,6 +1,7 @@
 using Carter;
 using ModularMonolith.Books;
 using System.Reflection;
+using ModularMonolith.Users;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 List<Assembly> mediatRAssemblies = [typeof(Program).Assembly];
 
 builder.Services.AddBookModuleServices(builder.Configuration, mediatRAssemblies);
+builder.Services.AddUsersModuleServices(builder.Configuration, mediatRAssemblies);
 
 builder.Services.AddMediatR(configuration =>
     configuration.RegisterServicesFromAssemblies(mediatRAssemblies.ToArray()));
